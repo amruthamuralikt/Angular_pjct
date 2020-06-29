@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Angular Application</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Bootstrap 101 Template</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+         
+         <link rel="stylesheet" type="text/css" href="css/style1.css">
+        
+    
+    </head>
+    <body>
+                                 
+                 <nav class="navbar navbar-expand-sm navbar-dark  bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><h3>WELCOME</h3></a>
+                
+            </div>
+    </div>
+    </nav><br><br><br><br><br>
+        
+<div class="container">
+<div class="main"  ng-app="app1" ng-controller="ctrl1">
+    <h1>List of Items</h1>
+    <div class="additem">
+        <input ng-model="addItem" placeholder="Add to-do" class="addtext">
+        <button ng-click="pushItem()">Add</button>
+      
+
+        </div>
+        <ul>
+            <li ng-repeat=" i in items"> 
+            {{i}}    
+           
+                <span ng-click="delete($index)">x</span>
+            </li> 
+        </ul>
+    </div>
+    </div>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
